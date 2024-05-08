@@ -1,0 +1,9 @@
+### Submit Order
+POST http://localhost:4004/odata/v4/user/createUser
+Content-Type: application/json
+
+{
+    "document": "1004",
+    "name": "Jonathan",
+    "last_name": "Herrera"
+}

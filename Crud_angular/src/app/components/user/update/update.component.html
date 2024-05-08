@@ -1,0 +1,23 @@
+<mat-dialog-content class="mat-typography">
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>X</button>
+    </mat-dialog-actions>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field hintLabel="Max 4 characters">
+            <mat-label>Enter the document</mat-label>
+            <input matInput #input_document maxlength="4" formControlName="document">
+            <mat-hint align="end">{{input_document.value.length}}/4</mat-hint>
+        </mat-form-field>
+        <mat-form-field hintLabel="Max 10 characters">
+            <mat-label>Enter the name</mat-label>
+            <input matInput #input_name maxlength="10" formControlName="name">
+            <mat-hint align="end">{{input_name.value.length}}/10</mat-hint>
+        </mat-form-field>
+        <mat-form-field hintLabel="Max 10 characters">
+            <mat-label>Enter the last name</mat-label>
+            <input matInput #input_last_name maxlength="10" formControlName="last_name">
+            <mat-hint align="end">{{input_last_name.value.length}}/10</mat-hint>
+        </mat-form-field>
+        <button mat-flat-button color="primary" type="submit">Update</button>
+    </form>
+</mat-dialog-content>
