@@ -1,5 +1,11 @@
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 40px;
+}
+
+.form_fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

@@ -6,6 +6,7 @@ import { UpdateComponent } from '../user/update/update.component';
 import { CreateComponent } from '../user/create/create.component';
 import { MatButtonModule } from '@angular/material/button';
 import { DeleteComponent } from '../user/delete/delete.component';
+import { MatIconModule } from '@angular/material/icon';
 
 interface User {
   document: string,
@@ -16,7 +17,7 @@ interface User {
 @Component({
   selector: 'app-panel',
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, CreateComponent, DeleteComponent],
+  imports: [MatTableModule, MatButtonModule, MatIconModule, CreateComponent, DeleteComponent],
   templateUrl: './panel.component.html',
   styleUrl: './panel.component.css'
 })
@@ -46,6 +47,16 @@ export class PanelComponent implements OnInit {
     });
 
     dialogRef.componentInstance.getEventData.subscribe(() => {
+      dialogRef.close();
+      this.getDataEvent();
+    })
+  }
+
+  openDialogCreate() {
+    const dialogRef = this.dialog.open(CreateComponent);
+
+    dialogRef.componentInstance.getEventData.subscribe(() => {
+      dialogRef.close();
       this.getDataEvent();
     })
   }

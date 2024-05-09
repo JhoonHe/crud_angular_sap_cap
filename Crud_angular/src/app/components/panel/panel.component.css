@@ -4,3 +4,9 @@
     flex-direction: column;
     gap: 50px;
 }
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
