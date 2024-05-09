@@ -10,8 +10,8 @@ form {
     gap: 20px;
 }
 
-.buttons {
+.btn {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     gap: 10px;
 }

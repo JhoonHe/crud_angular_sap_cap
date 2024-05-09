@@ -25,7 +25,7 @@ export class PanelComponent implements OnInit {
 
   constructor(private client: ClientService, public dialog: MatDialog) { }
 
-  displayedColumns: string[] = ['document', 'name', 'last_name', 'actions'];
+  displayedColumns: string[] = ['document', 'name', 'last_name', 'update', 'delete'];
   users: User[] = [];
 
   ngOnInit(): void {

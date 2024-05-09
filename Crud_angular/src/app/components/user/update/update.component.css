@@ -9,3 +9,8 @@ form {
     flex-direction: column;
     gap: 20px;
 }
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
